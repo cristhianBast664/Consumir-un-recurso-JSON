@@ -1,0 +1,28 @@
+<body>
+  <header>
+    <h1 class="display-5">Equipamiento Interno de Infraestructura del Sector Salud Municipio De Pasto</h1>
+  </header>
+  <div class="container">
+    <div *ngIf="datos!; else espera">
+    <table class="table table-hover table-sm" border="1">
+      <thead>
+        <tr>
+          <th scope="col">N°</th>
+          <th scope="col">Tipo</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Dirección</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let dat of datos">
+          <td>{{dat.n}}</td>
+          <td>{{dat.tipo}}</td>
+          <td>{{dat.nombre}}</td>
+          <td>{{dat.direcci_n}}</td>
+        </tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <ng-template #espera>Esperando datos...</ng-template>
+</body>
